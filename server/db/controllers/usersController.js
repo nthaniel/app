@@ -10,11 +10,11 @@ module.exports = {
       .then(function(user) {
         // if returns an empty array [], user doesn't exist
         if (user.length === 0) {
-          db.knex('users').insert({ 
+          return db.knex('users').insert({ 
             user_twitter_id: profile.id, 
             token: token, 
             tokenSecret: tokenSecret
-          })
+          });
         }
       })
       .catch(function(err) {
