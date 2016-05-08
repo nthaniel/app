@@ -19,7 +19,9 @@ module.exports = {
       },
       seeds: {
       directory: './server/db/seeds/development'
-      }
+      },
+      host: 'db',
+      port: 5432
     }
   },
   production: {
