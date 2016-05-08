@@ -12,16 +12,17 @@ module.exports = {
   development: {
     client: 'pg',
     connection: {
-      database: 'botlbot_db',
-      migrations: {
-        tableName: 'migrations',
-        directory: './server/db/migrations'
-      },
-      seeds: {
-      directory: './server/db/seeds/development'
-      },
+      // database: 'botlbot_db',
+      // migrations: {
+      //   tableName: 'migrations',
+      //   directory: './server/db/migrations'
+      // },
+      // seeds: {
+      // directory: './server/db/seeds/development'
+      // },
       host: 'db',
-      port: 5432
+      port: 5432,
+      user: 'postgres'
     }
   },
   production: {
