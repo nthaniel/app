@@ -21,7 +21,7 @@ module.exports = function(passport) {
     new TwitterStrategy({
       consumerKey: process.env.CONSUMER_KEY,
       consumerSecret: process.env.CONSUMER_SECRET,
-      callbackURL: 'http://127.0.0.1:1337/auth/callback'
+      callbackURL: process.env.IP + '/auth/callback'
       // NOTE you must use 127.0.0.1, not localhost
       // ALSO this must match the callback URL provided on apps.twitter.com settings page
     },
