@@ -9,7 +9,7 @@ const KEYS = {
   access_token_secret: process.env.ACCESS_TOKEN_SECRET,
 };
 
-var dummyTweets = require('./dummyTweets.js');
+var dummyTweets = require('./dummytweets.js');
 
 var ensureAuthenticated = function(req, res, next) {
   if (req.isAuthenticated()) {
