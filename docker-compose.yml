@@ -4,7 +4,12 @@ services:
   redis:
     image: redis
 
+  db:
+    image: postgres
+
   botlbot:
     build: .
+    links:
+      - db
     ports:
       - 1337:1337
