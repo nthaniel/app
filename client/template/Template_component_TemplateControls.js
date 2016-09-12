@@ -26,7 +26,6 @@ const TemplateControls = ({
       disabled={template.length === 0 || template.name === undefined || template.name === ''} 
       onMouseUp={() => {
         if(template.id !== undefined) {
-          console.log('UPDATING, SHOULD SHOW SNACK');
           setSnackMessage(`Updating template '${template.name}'...`);
           updateTemplate(template)
           // .then(res => getTemplateNames())
@@ -34,7 +33,6 @@ const TemplateControls = ({
           .then(() => redirectToDashboard())
           .catch((err) => setSnackMessage('Couldn\'t update template...'));
         } else {
-          console.log('SAVING, SHOULD SHOW SNACK');
           setSnackMessage(`Saving template '${template.name}'...`);
           saveTemplate(template)
             // .then(res => getTemplateNames());
@@ -53,7 +51,6 @@ const TemplateControls = ({
       label={'Clear'} 
       disabled={template.length === 0} 
       onMouseUp={() => {
-        console.log('TEMPLATE ID IS', template.id);
         trashTemplate(template.id);
       }}
     />
@@ -66,7 +63,6 @@ const TemplateControls = ({
           <RaisedButton 
             label={'Delete'}  
             onMouseUp={() => {
-              console.log('DELETING, SHOULD SHOW SNACK');
               setSnackMessage(`Deleting template '${template.name}'...`);
               deleteTemplate(template.id)
                 // .then(res => getTemplateNames())

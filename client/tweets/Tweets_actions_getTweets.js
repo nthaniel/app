@@ -31,7 +31,6 @@ export function getScheduledTweets(scheduledtweets) {
 // Below are async actions that will make a request to API endpoint
 // this function is called when Dashboard is mounted.
 export function getTweetsAsync(page) {
-  console.log('CLIENT SIDE PAGE IS', page);
   page = page || 0;
   return dispatch => {
     dispatch(fetchRequest());

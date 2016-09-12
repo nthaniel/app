@@ -42,7 +42,6 @@ export function logoutUser() {
     dispatch(requestLogout());
     return fetch('/logout', { method: 'GET', credentials: 'same-origin'})
       .then(json => {
-        console.log(json);
         localStorage.removeItem('sessionID');
         dispatch(receiveLogout());
         dispatch(replace('/'));

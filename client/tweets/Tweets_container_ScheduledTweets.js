@@ -6,7 +6,6 @@ import TweetListContainer from './Tweets_container_TweetList';
 class ScheduledTweetContainer extends React.Component {
 
   componentWillMount() {
-    // console.log('mounting scheduled tweets container');
     const { dispatch } = this.props;
     dispatch(getScheduledTweetsAsync());
   }

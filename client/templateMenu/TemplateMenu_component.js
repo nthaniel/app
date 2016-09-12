@@ -204,8 +204,7 @@ class TemplateMenu extends Component {
   //   super(props);
   // }
   // componentDidUpdate () {
-  //   console.log(currentInput);
-  //   console.log('REFS ARE', Object.keys(this.refs));
+
   //   this.refs[currentInput] && this.refs[currentInput].focus();
   // }
 

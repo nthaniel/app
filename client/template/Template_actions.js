@@ -64,7 +64,6 @@ export function postTemplateAsync(template) {
       template,
       name: template.name
     });
-    console.log(data);
     dispatch(fetchRequest());
     return fetch('/templates/', {
       headers: {
@@ -76,7 +75,6 @@ export function postTemplateAsync(template) {
       body: data
     })
       .then(res => {
-        console.log(res);
         if (res.status === 201) {
           dispatch(saveTemplate());
           dispatch(fetchSuccess());
@@ -98,7 +96,6 @@ export function editTemplateAsync(template) {
       name: template.name,
       id: template.id
     });
-    console.log(data);
     dispatch(fetchRequest());
     return fetch('/templates/' + template.id, {
       headers: {
@@ -110,7 +107,6 @@ export function editTemplateAsync(template) {
       body: data
     })
       .then(res => {
-        console.log('PUTTED!', res);
         if (res.status === 201) {
           dispatch(fetchSuccess());
         }
@@ -132,7 +128,6 @@ export function deleteTemplateAsync(templateID) {
       credentials: 'same-origin'
     })
       .then(res => {
-        console.log('DELETED!', res);
         if (res.status === 201) {
           dispatch(fetchSuccess());
         }
@@ -155,7 +150,6 @@ export function getTemplateAsync(id) {
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res);
         // if (res.status === 200) {
         dispatch(fetchSuccess());
         dispatch(loadTemplate(res));
@@ -179,7 +173,6 @@ export function getTemplateNamesAsync() {
     })
       .then(res => res.json())
       .then(res => {
-        console.log('response ------->', res);
         dispatch(fetchSuccess());
         dispatch(loadIDs(res));
       })

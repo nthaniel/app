@@ -13,8 +13,7 @@ class EditABot extends Component {
   }
 
   componentWillReceiveProps(newprops) {
-    console.log('TEMPLATE ID IS', newprops.params.id);
-    console.log('store IS', this.context.store);
+
     this.props.params.id !== newprops.params.id && this.props.getTemplate(newprops.params.id);
   }
 
@@ -23,7 +22,6 @@ class EditABot extends Component {
   }
 
   componentWillUnmount() {
-    console.log('DISMOUNTING');
     this.props.trashTemplate();
   }
 
