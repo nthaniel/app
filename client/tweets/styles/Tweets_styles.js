@@ -9,6 +9,7 @@ const style = {
     padding: '5px',
     background: 'white',
     color: '#6A7C86',
+    flex: '0 0 0'
   },
   tweet: {
     boxShadowing: '',
